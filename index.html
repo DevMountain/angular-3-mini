@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fourWheels">
+  <head>
+    <title>Four Wheels</title>
+    
+    <!-- META INFO -->
+    <meta charset="UTF-8">
+    <meta name="description" content="DevMtn Travels app using ui-routes ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--RESET FILE -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!--MAIN FILE-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="app/header/header.css" />
+    <link rel="stylesheet" href="app/car/car.css" />
+    <link rel="stylesheet" href="app/footer/footer.css" />
+  </head>
+
+  <body ng-controller="mainCtrl">
+
+    <header title="'Four Wheels'"></header>
+
+    <div class="cars__parent">
+      <div class="cars__child">
+        <car ng-repeat="car in cars" car="car" on-buy="buyCar"></car>
+      </div>
+    </div>
+
+    <footer></footer>
+
+
+    <!-- Including angular and ui-router then our javascript files. ORDER MATTERS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+
+    <!--Our Custom Script Files-->
+    <script src="app/app.js"></script>
+    <script src="app/mainCtrl.js"></script>
+    <script src="app/mainSrvc.js"></script>
+
+    <script src="app/header/header.component.js"></script>
+
+    <script src="app/car/car.component.js"></script>
+
+    <script src="app/footer/footer.component.js"></script>
+  </body>
+</html>
