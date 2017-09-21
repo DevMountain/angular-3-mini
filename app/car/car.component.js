@@ -1,6 +1,7 @@
 function carController() {
   this.buy = function( id ) {
     console.log('CarController buy:', id);
+    
     this.onBuy({ id: id });
   };
 }
