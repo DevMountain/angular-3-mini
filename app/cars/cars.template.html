@@ -1,8 +1,8 @@
 <div class="cars__parent">
   <div class="cars__child">
-    <div ng-repeat="car in $ctrl.cars">
+    <div ng-repeat="car in carsCtrl.cars">
       {{ car }}
-      <button ng-click="$ctrl.buyCar( car.id )">Buy</button>
+      <button ng-click="carsCtrl.buyCar( car.id )">Buy</button>
     </div>
   </div>
 </div>

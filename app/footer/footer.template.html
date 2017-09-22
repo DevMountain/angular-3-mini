@@ -4,16 +4,16 @@
 
     <div class="footer__input-container">
       <span>Name: </span>
-      <input ng-model="$ctrl.name" />
+      <input ng-model="footerCtrl.name" />
     </div>
 
     <div class="footer__input-container">
       <span>Email: </span>
-      <input ng-model="$ctrl.email" />
+      <input ng-model="footerCtrl.email" />
     </div>
 
-    <button ng-click="$ctrl.contact();">Contact!</button>
+    <button ng-click="footerCtrl.contact()">Contact!</button>
 
-    <p ng-if="$ctrl.contacted">We'll send you an email soon, thanks!</p>
+    <p ng-if="footerCtrl.contacted">We'll send you an email soon, thanks!</p>
   </div>
 </div>

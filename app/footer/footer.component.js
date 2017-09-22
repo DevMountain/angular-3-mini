@@ -1,18 +1,16 @@
-function footerController() {
-  this.contacted = false;
-
-  this.contact = function() {
-    this.onContact();
-    this.contacted = true;
-  };
-}
-
 angular.module('fourWheels').component('footer', {
   templateUrl: 'app/footer/footer.template.html',
-  controller: footerController,
-  bindings: {
-    name: '=',
-    email: '=',
-    onContact: '&'
-  }
+  controllerAs: 'footerCtrl',
+
+  controller: function() {
+    this.name = "Bob Joe";
+    this.email = "bobjoe@gmail.com";
+    this.contacted = false;
+    
+    this.contact = function() {
+      this.contacted = true;
+      this.name = "";
+      this.email = "";
+    };
+  },
 });

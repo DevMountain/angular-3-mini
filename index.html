@@ -20,13 +20,13 @@
     <link rel="stylesheet" href="app/footer/footer.css" />
   </head>
 
-  <body ng-controller="mainCtrl">
+  <body>
 
     <header title="'Four Wheels'"></header>
 
     <cars></cars>
 
-    <footer name="name" email="email" on-contact="contact()"></footer>
+    <footer></footer>
 
 
     <!-- Including angular and ui-router then our javascript files. ORDER MATTERS -->
@@ -34,8 +34,7 @@
 
     <!--Our Custom Script Files-->
     <script src="app/app.js"></script>
-    <script src="app/main.service.js"></script>
-    <script src="app/main.controller.js"></script>
+    <script src="app/services/cars.service.js"></script>
 
     <script src="app/header/header.component.js"></script>
 
