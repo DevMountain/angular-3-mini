@@ -15,12 +15,4 @@ angular.module('fourWheels').service('mainSrvc', function( $http ) {
       year: '1993'
     }
   ];
-
-  this.buyCar = function( id ) {
-    const carIndex = this.cars.findIndex( car => car.id === id );
-
-    if ( carIndex !== -1 ) {
-      this.cars.splice( carIndex, 1 );
-    }
-  };
 });
