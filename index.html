@@ -16,17 +16,17 @@
 
     <!-- Component Styles -->
     <link rel="stylesheet" href="app/header/header.css" />
-    <link rel="stylesheet" href="app/car/car.css" />
+    <link rel="stylesheet" href="app/cars/cars.css" />
     <link rel="stylesheet" href="app/footer/footer.css" />
   </head>
 
-  <body ng-controller="mainCtrl">
+  <body>
 
     <header title="'Four Wheels'"></header>
 
     <div class="cars__parent">
       <div class="cars__child">
-        <car ng-repeat="car in cars" car="car" on-buy="buyCar"></car>
+        <cars></cars>
       </div>
     </div>
 
@@ -38,12 +38,11 @@
 
     <!--Our Custom Script Files-->
     <script src="app/app.js"></script>
-    <script src="app/mainCtrl.js"></script>
     <script src="app/mainSrvc.js"></script>
 
     <script src="app/header/header.component.js"></script>
 
-    <script src="app/car/car.component.js"></script>
+    <script src="app/cars/cars.component.js"></script>
 
     <script src="app/footer/footer.component.js"></script>
   </body>
