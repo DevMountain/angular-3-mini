@@ -4,7 +4,7 @@ function footerController() {
   this.contact = function() {
     this.onContact();
     this.contacted = true;
-  }
+  };
 }
 
 angular.module('fourWheels').component('footer', {
