@@ -1,4 +1,8 @@
-<div ng-repeat="car in $ctrl.cars">
-  {{ car }}
-  <button ng-click="$ctrl.buyCar( car.id )">Buy</button>
+<div class="cars__parent">
+  <div class="cars__child">
+    <div ng-repeat="car in $ctrl.cars">
+      {{ car }}
+      <button ng-click="$ctrl.buyCar( car.id )">Buy</button>
+    </div>
+  </div>
 </div>
