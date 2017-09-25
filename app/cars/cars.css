@@ -1,10 +1,12 @@
 .cars__parent {
   width: 100%;
   height: auto;
-  min-height: 300px;
   border: 1px solid black;
   box-sizing: border-box;
   margin-top: 2px;
+  height: calc( 100vh - 206px );
+  min-height: 200px;
+  max-height: 725px;
 }
 
 .cars__child {
