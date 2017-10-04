@@ -149,6 +149,25 @@ The template will need access to two things in order to function correctly. The 
 
 ### Solution
 
+<details>
 
+<summary> <code> app/cars/cars.component.js </code> </summary>
 
+```js
+angular.module('fourWheels').component('cars', {
+  templateUrl: 'app/cars/cars.template.html',
+  controllerAs: 'carsCtrl',
+
+  controller: function( carsSrvc ) {
+    this.cars = carsSrvc.cars;
+
+    this.buyCar = function( id ) {
+      carsSrvc.buyCar( id );
+      this.cars = carsSrvc.cars;
+    };
+  }
+});
+```
+
+</details>
 
