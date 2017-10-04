@@ -107,7 +107,7 @@ In this step, we'll modify the template for the header component to display the 
   <body>
 
     <header title="'Four Wheels'"></header>
-    
+
     <!-- Including angular then our javascript files. ORDER MATTERS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
     <!--Our Custom Script Files-->
@@ -120,4 +120,35 @@ In this step, we'll modify the template for the header component to display the 
 ```
 
 </details>
+
+## Step 3
+
+### Summary
+
+In this step, we'll create a `cars` component that will use the `carsSrvc` service to display a list of cars available for sale.
+
+### Instructions
+
+* Open `app/cars/cars.component.js`.
+* Create the skeleton of an Angular component.
+  * Use `fourWheels` as the application name.
+  * Use `cars` as the component name.
+* Link the `cars.template.html` to the component using `templateUrl`.
+* Define the controller name as `carsCtrl` using `controllerAs`.
+* Create a controller function using `controller`:
+  * This controller should have the `carsSrvc` service injected into it.
+
+
+The template will need access to two things in order to function correctly. The first being the list of cars that's stored on `carsSrvc` service. The second being a custom method that calls the `buyCar` method on the `carsSrvc` and then updates the list of cars. Using `this` we can create variables on the controller that the `template` will have access to.
+
+* In the controller in `app/cars/cars.component.js`:
+  * Create a variable called `cars` that equals the `cars` array on the `carsSrvc` service.
+  * Create a method called `buyCar` that takes in an `id`:
+    * This method should call the `buyCar` method on `casSrvc` with the `id`.
+    * This method should then update the value of `cars` to be the new value of the `cars` array on the `carsSrvc` service.
+
+### Solution
+
+
+
 
