@@ -372,6 +372,9 @@ In this step, we'll modify the template for the footer component to use `ng-mode
   * Call the `contact` method on the `footerCtrl` controller.
 * Locate the empty `ng-if`:
   * The condition should be when `contacted` on the `footerCtrl` controller equals true.
+* Open `index.html`.
+* Add a new script tag for the footer component.
+* Just below the cars component, render the footer component.
 
 ### Solution
 
@@ -439,6 +442,8 @@ In this step, we'll modify the template for the footer component to use `ng-mode
 
     <cars></cars>
 
+    <footer></footer>
+
     <!-- Including angular then our javascript files. ORDER MATTERS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
     <!--Our Custom Script Files-->
@@ -447,6 +452,7 @@ In this step, we'll modify the template for the footer component to use `ng-mode
     <!-- Component Files -->
     <script src="app/header/header.component.js"></script>
     <script src="app/cars/cars.component.js"></script>
+    <script src="app/footer/footer.component.js"></script>
   </body>
 </html>
 ```
