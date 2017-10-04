@@ -139,11 +139,11 @@ In this step, we'll create a `cars` component that will use the `carsSrvc` servi
   * This controller should have the `carsSrvc` service injected into it.
 
 
-The template will need access to two things in order to function correctly. The first being the list of cars that's stored on `carsSrvc` service. The second being a custom method that calls the `buyCar` method on the `carsSrvc` and then updates the list of cars. Using `this` we can create variables on the controller that the `template` will have access to.
+The template will need access to two things in order to function correctly. The first being the list of cars that's stored on `carsSrvc` service. The second being a custom method that calls the `buyCar` method on the `carsSrvc` and then updates the list of cars. Using `this` we can assign values on the controller that the `template` will have access to.
 
 * In the controller in `app/cars/cars.component.js`:
-  * Create a variable called `cars` that equals the `cars` array on the `carsSrvc` service.
-  * Create a method called `buyCar` that takes in an `id`:
+  * Assign an array called `cars` that equals the `cars` array on the `carsSrvc` service.
+  * Assign a method called `buyCar` that takes in an `id`:
     * This method should call the `buyCar` method on `casSrvc` with the `id`.
     * This method should then update the value of `cars` to be the new value of the `cars` array on the `carsSrvc` service.
 
@@ -167,6 +167,138 @@ angular.module('fourWheels').component('cars', {
     };
   }
 });
+```
+
+</details>
+
+## Step 4
+
+### Summary
+
+In this step, we'll modify the template for the cars component to display the list of cars available for sale. We'll then add our new component into `index.html` so we can see what the template will render.
+
+### Instructions
+
+* Open `app/cars/cars.template.html`.
+* Locate the empty `ng-repeat`:
+  * Configure the `ng-repeat` to loop through the `cars` array on the `carsCtrl` controller.
+* Update the commented sections to display the correct value for each `car`.
+  * You can look in the service to see what properties make up a `car` object.
+* Locate the empty `ng-click`:
+  * Configure the `ng-click` to call the `buyCar` method on the `carsCtrl` with the `car`'s `id`.
+* Open `index.html`.
+* Add a new script tag for the cars component.
+* Just below the header component, render the cars component.
+
+### Solution
+
+<details>
+
+<summary> <code> app/cars/cars.template.html </code> </summary>
+
+```html
+<div class="cars__parent">
+  <div class="cars__child">
+    <h1 class="alfa-slab-one">Car Listings</h1>
+
+    <div class="car__container" ng-repeat="car in carsCtrl.cars">
+      <div class="car__container-left">
+
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans">Make:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Make Here -->
+            {{ car.make }}
+          </div>
+        </div>
+
+        <br />
+
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans">Color:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Color Here -->
+            {{ car.color }}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="car__container-middle">
+
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans">Model:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Model Here -->
+            {{ car.model }}
+          </div>
+        </div>
+
+        <br />
+
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans mr">Year:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Year Here -->
+            {{ car.year }}
+          </div>
+        </div>
+      </div>
+
+      <div class="car__container-right">
+        <button class="alfa-slab-one" ng-click="carsCtrl.buyCar( car.id )">BUY</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+```
+
+</details>
+
+<details>
+
+<summary> <code> index.html </code> </summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en" ng-app="fourWheels">
+  <head>
+    <title>Four Wheels</title>
+    
+    <!-- META INFO -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Four Wheels Car Store">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--RESET FILE -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!--MAIN FILE-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="app/header/header.css" />
+    <link rel="stylesheet" href="app/cars/cars.css" />
+    <link rel="stylesheet" href="app/footer/footer.css" />
+  </head>
+
+  <body>
+
+    <header title="'Four Wheels'"></header>
+
+    <cars></cars>
+
+    <!-- Including angular then our javascript files. ORDER MATTERS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+    <!--Our Custom Script Files-->
+    <script src="app/app.js"></script>
+    <script src="app/services/cars.service.js"></script>
+    <!-- Component Files -->
+    <script src="app/header/header.component.js"></script>
+    <script src="app/cars/cars.component.js"></script>
+  </body>
+</html>
 ```
 
 </details>
