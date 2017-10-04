@@ -10,7 +10,7 @@ Live Example: <a href="https://devmountain.github.io/angular-3-mini/">Click Me!<
 
 ### Summary
 
-In this step, we'll create the header component. This component will be designed to take in a `title` value and then display that value in its template file. We can use `bindings` to accomplish this.
+In this step, we'll create a `header` component. This component will be designed to take in a `title` value and then display that value in its template file. We can use `bindings` to accomplish this.
 
 ### Instructions
 
@@ -185,7 +185,7 @@ In this step, we'll modify the template for the cars component to display the li
 * Update the commented sections to display the correct value for each `car`.
   * You can look in the service to see what properties make up a `car` object.
 * Locate the empty `ng-click`:
-  * Configure the `ng-click` to call the `buyCar` method on the `carsCtrl` with the `car`'s `id`.
+  * Configure the `ng-click` to call the `buyCar` method on the `carsCtrl` controller with the `car`'s `id`.
 * Open `index.html`.
 * Add a new script tag for the cars component.
 * Just below the header component, render the cars component.
@@ -299,6 +299,55 @@ In this step, we'll modify the template for the cars component to display the li
     <script src="app/cars/cars.component.js"></script>
   </body>
 </html>
+```
+
+</details>
+
+## Step 5
+
+### Summary
+
+In this step, we'll create a `footer` component. This component will be designed to mimic a `Contact Us` section. This component will take a user's name and email and then when a user submits their information the component will clear out the input fields and display a confirmation message.
+
+### Instructions
+
+* Open `app/footer/footer.component.js`.
+* Create the skeleton of an Angular component.
+  * Use `fourWheels` as the application name.
+  * Use `footer` as the component name.
+* Link the `footer.template.html` to the component using `templateUrl`.
+* Define the controller name as `footerCtrl` using `controllerAs`.
+* Create a controller function using controller:
+  * Assign an empty string called `name`.
+  * Assign an empty string called `email`.
+  * Assign a false boolean called `contacted.`
+  * Assign a method called `contact`.
+    * This method should set the value of `name` and `email` back to an empty string.
+    * This method should set the value of `contacted` to true.
+
+### Solution
+
+<details>
+
+<summary> <code> app/footer/footer.component.js </code> </summary>
+
+```js
+angular.module('fourWheels').component('footer', {
+  templateUrl: 'app/footer/footer.template.html',
+  controllerAs: 'footerCtrl',
+
+  controller: function() {
+    this.name = "";
+    this.email = "";
+    this.contacted = false;
+    
+    this.contact = function() {
+      this.contacted = true;
+      this.name = "";
+      this.email = "";
+    };
+  },
+});
 ```
 
 </details>
