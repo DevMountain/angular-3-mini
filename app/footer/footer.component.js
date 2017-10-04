@@ -3,8 +3,8 @@ angular.module('fourWheels').component('footer', {
   controllerAs: 'footerCtrl',
 
   controller: function() {
-    this.name = "Bob Joe";
-    this.email = "bobjoe@gmail.com";
+    this.name = "";
+    this.email = "";
     this.contacted = false;
     
     this.contact = function() {

@@ -20,48 +20,6 @@ angular.module('fourWheels').service('carsSrvc', function( $http ) {
       model: 'Viper',
       color: 'Green',
       year: '2017'
-    },
-    {
-      id: '1',
-      make: 'Ford',
-      model: 'F-150',
-      color: 'White',
-      year: '1993'
-    },
-    {
-      id: '2',
-      make: 'Dodge',
-      model: 'Viper',
-      color: 'Green',
-      year: '2017'
-    },
-    {
-      id: '1',
-      make: 'Ford',
-      model: 'F-150',
-      color: 'White',
-      year: '1993'
-    },
-    {
-      id: '2',
-      make: 'Dodge',
-      model: 'Viper',
-      color: 'Green',
-      year: '2017'
-    },
-    {
-      id: '1',
-      make: 'Ford',
-      model: 'F-150',
-      color: 'White',
-      year: '1993'
-    },
-    {
-      id: '2',
-      make: 'Dodge',
-      model: 'Viper',
-      color: 'Green',
-      year: '2017'
     }
   ];
 
