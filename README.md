@@ -14,7 +14,8 @@ In this step, we'll create the header component.
 
 ### Instructions
 
-
+* Open `app/header/header.component.js`.
+* Create the skeleton of an Angular Component.
 
 ### Solution
 
