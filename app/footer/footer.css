@@ -1,8 +1,66 @@
 .footer__parent {
   width: 100%;
-  height: auto;
-  min-height: 300px;
+  min-height: 267px;
   box-sizing: border-box;
-  border: 1px solid black;
-  margin-top: 2px;
+  padding: 0px 232px;
+  color: #FFF;
+  min-width: 1300px;
+}
+
+.footer__child {
+  width: 100%;
+  min-height: 267px;
+  background-color: #242038;
+  padding: 23px 120px;
+}
+
+.footer__child h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.footer__inputs {
+  border-radius: 8px;
+  background-color: #FFF;
+  width: 464px;
+  min-height: 161px;
+  padding: 18px 16px;
+}
+
+.footer__input-container {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__input-header {
+  font-size: 18px;
+  font-weight: 800;
+  color: #6874e8;
+  margin-right: 16px;
+  width: 62px;
+  display: inline-block;
+}
+
+.footer__input {
+  border-radius: 8px;
+  border: solid 2px #6874e8;
+  height: 29px;
+  width: 100%;
+}
+
+.footer__btn-contact {
+  width: 100%;
+  height: 39px;
+  background-color: #6874e8;
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.footer__confirmation {
+  color: black;
+  margin-top: 16px;
+
 }

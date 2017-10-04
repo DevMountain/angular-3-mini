@@ -1,6 +1,6 @@
 {
   "name": "angular-3-mini",
-  "version": "1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "live-server ./"
   },

@@ -1,8 +1,48 @@
 <div class="cars__parent">
   <div class="cars__child">
-    <div ng-repeat="car in $ctrl.cars">
-      {{ car }}
-      <button ng-click="$ctrl.buyCar( car.id )">Buy</button>
+    <h1 class="alfa-slab-one">Car Listings</h1>
+
+    <div class="car__container" ng-repeat="">
+      <div class="car__container-left">
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans">Make:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Make Here -->
+          </div>
+        </div>
+
+        <br />
+
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans">Color:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Color Here -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="car__container-middle">
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans">Model:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Model Here -->
+          </div>
+        </div>
+
+        <br />
+
+        <div class="car__attribute">
+          <span class="car__attribute-header open-sans mr">Year:</span>
+          <div class="car__attribute-value merri-sans">
+            <!-- Car Year Here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="car__container-right">
+        <button class="alfa-slab-one" ng-click="">BUY</button>
+      </div>
     </div>
   </div>
 </div>

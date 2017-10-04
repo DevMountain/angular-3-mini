@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Merriweather+Sans');
+
+body {
+  background-color: #F2F2F2;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.alfa-slab-one {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.merri-sans {
+  font-family: 'Merriweather Sans', sans-serif;  
+}

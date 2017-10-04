@@ -1,19 +1,20 @@
 <div class="footer__parent">
   <div class="footer__child">
-    <h1> Contact Us </h1>
+    <h1 class="alfa-slab-one">Contact Us</h1>
 
-    <div class="footer__input-container">
-      <span>Name: </span>
-      <input ng-model="$ctrl.name" />
+    <div class="footer__inputs">
+      <div class="footer__input-container">
+        <div class="footer__input-header open-sans">Name: </div>
+        <!-- Name Input Here -->
+      </div>
+  
+      <div class="footer__input-container">
+        <div class="footer__input-header open-sans">Email: </div>
+        <!-- Email Input Here -->
+      </div>
+  
+      <button class="footer__btn-contact open-sans" ng-click="">Contact!</button>
+      <p class="footer__confirmation open-sans" ng-if="">We'll send you an email soon, thanks!</p>
     </div>
-
-    <div class="footer__input-container">
-      <span>Email: </span>
-      <input ng-model="$ctrl.email" />
-    </div>
-
-    <button ng-click="$ctrl.contact();">Contact!</button>
-
-    <p ng-if="$ctrl.contacted">We'll send you an email soon, thanks!</p>
   </div>
 </div>
