@@ -53,7 +53,7 @@ In this step, we'll modify the template for the header component to display the 
 * Add the value of `title` into the `<h1>` element.
 * Open `index.html`.
 * Add a new `script` tag for the `header` component.
-* Just below the opening `body` tag, render the `header` component.
+* Just below the opening `body` tag, render the `header` component with a `title` of `Four Wheels`.
 
 ### Solution
 
@@ -73,6 +73,50 @@ In this step, we'll modify the template for the header component to display the 
     <img class="header__wheel" src="assets/wheel.png" />
   </div>
 </div>
+```
+
+</details>
+
+<details>
+
+<summary> <code> index.html </code> </summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en" ng-app="fourWheels">
+  <head>
+    <title>Four Wheels</title>
+    
+    <!-- META INFO -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Four Wheels Car Store">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--RESET FILE -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!--MAIN FILE-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="app/header/header.css" />
+    <link rel="stylesheet" href="app/cars/cars.css" />
+    <link rel="stylesheet" href="app/footer/footer.css" />
+  </head>
+
+  <body>
+
+    <header title="'Four Wheels'"></header>
+    
+    <!-- Including angular then our javascript files. ORDER MATTERS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+    <!--Our Custom Script Files-->
+    <script src="app/app.js"></script>
+    <script src="app/services/cars.service.js"></script>
+    <!-- Component Files -->
+    <script src="app/header/header.component.js"></script>
+  </body>
+</html>
 ```
 
 </details>
