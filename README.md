@@ -352,3 +352,93 @@ angular.module('fourWheels').component('footer', {
 
 </details>
 
+## Step 6
+
+### Summary
+
+In this step, we'll modify the template for the footer component to use `ng-models` and to have a `ng-click` event to call the `contact` method on the `footerCtrl` controller. We'll then add our new component into `index.html` so we can see what the template will render.
+
+### Instructions
+
+
+
+### Solution
+
+<details>
+
+<summary> <code> app/footer/footer.template.html </code> </summary>
+
+```html
+<div class="footer__parent">
+  <div class="footer__child">
+    <h1 class="alfa-slab-one"> Contact Us </h1>
+
+    <div class="footer__inputs">
+      <div class="footer__input-container">
+        <div class="footer__input-header open-sans">Name: </div>
+        <!-- Name Input Here -->
+        <input class="footer__input" ng-model="footerCtrl.name" />
+      </div>
+  
+      <div class="footer__input-container">
+        <div class="footer__input-header open-sans">Email: </div>
+        <!-- Email Input Here -->
+        <input class="footer__input" ng-model="footerCtrl.email" />
+      </div>
+  
+      <button class="footer__btn-contact open-sans" ng-click="footerCtrl.contact()">Contact!</button>
+      <p class="footer__confirmation open-sans" ng-if="footerCtrl.contacted">We'll send you an email soon, thanks!</p>
+    </div>
+  </div>
+</div>
+```
+
+</details>
+
+<details>
+
+<summary> <code> index.html </code> </summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en" ng-app="fourWheels">
+  <head>
+    <title>Four Wheels</title>
+    
+    <!-- META INFO -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Four Wheels Car Store">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--RESET FILE -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!--MAIN FILE-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="app/header/header.css" />
+    <link rel="stylesheet" href="app/cars/cars.css" />
+    <link rel="stylesheet" href="app/footer/footer.css" />
+  </head>
+
+  <body>
+
+    <header title="'Four Wheels'"></header>
+
+    <cars></cars>
+
+    <!-- Including angular then our javascript files. ORDER MATTERS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+    <!--Our Custom Script Files-->
+    <script src="app/app.js"></script>
+    <script src="app/services/cars.service.js"></script>
+    <!-- Component Files -->
+    <script src="app/header/header.component.js"></script>
+    <script src="app/cars/cars.component.js"></script>
+  </body>
+</html>
+```
+
+</details>
+
