@@ -360,7 +360,18 @@ In this step, we'll modify the template for the footer component to use `ng-mode
 
 ### Instructions
 
-
+* Locate the `Name Input` comment:
+  * Add a new `input` element with:
+    * The input should have a class of: `footer__input`.
+    * The input should use an `ng-model` equal to the `name` on the `footerCtrl` controller.
+* Locate the `Email Input` comment:
+  * Add a new `input` element with:
+    * The input should have a class of: `footer__input`.
+    * The input should use an `ng-model` equal to the `email` on the `footerCtrl` controller.
+* Locate the empty `ng-click`:
+  * Call the `contact` method on the `footerCtrl` controller.
+* Locate the empty `ng-if`:
+  * The condition should be when `contacted` on the `footerCtrl` controller equals true.
 
 ### Solution
 
