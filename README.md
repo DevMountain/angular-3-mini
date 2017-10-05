@@ -21,7 +21,8 @@ In this step, we'll create a `header` component. This component will be designed
 * Link the `header.template.html` to component using `templateUrl`.
   * Remember to use `absolute` paths.
 * Define the controller name as `headerCtrl` using `controllerAs`.
-* Create a `one-way` binding for a `title` property.
+* Create a `@` binding for a `title` property.
+  * `@` denotes a binding of a string that doesn't change.
 
 ### Solution
 
@@ -34,7 +35,7 @@ angular.module('fourWheels').component('header', {
   templateUrl: 'app/header/header.template.html',
   controllerAs: 'headerCtrl',
   bindings: {
-    title: '<'
+    title: '@'
   }
 });
 ```
