@@ -4,7 +4,9 @@
 
 In this project, we'll learn how to create and use basic Angular components. We'll create three components in this project and use one of them with a service. The service has already been setup for this project and can be viewed at `app/services/cars.service.js`. Get familiar with what the service does before beginning the project. 
 
-Live Example: <a href="https://devmountain.github.io/angular-3-mini/">Click Me!</a>
+# Live Example
+
+<a href="https://devmountain.github.io/angular-3-mini/">Click Me!</a>
 
 ## Step 1
 
